@@ -2,8 +2,7 @@ import React,{useEffect}  from "react";
 import {Link, useLocation} from "react-router-dom";
 import Header from "./Header";
 import { useSelector, useDispatch } from "react-redux";
-import {changePizza, falsePizza, changeBurger, falseBurger, changeBbq, falseBbq , changeSushi, falseSushi, changeVegan, falseVegan, changeDeserts, falseDeserts, initializeForm, requestData, receiveDataSuccess, receiveDataFailed } from "../actions"
-
+import {changePizza, falsePizza, changeBurger, falseBurger, changeBbq, falseBbq , changeSushi, falseSushi, changeVegan, falseVegan, changeDeserts, falseDeserts} from "../actions"
 
 
 const Home = () => {
@@ -339,8 +338,6 @@ const Home = () => {
                             </ul>
                         </div>
                     </li>
-
-
 
                 </ul>
             </div>

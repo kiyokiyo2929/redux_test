@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import {CHANGE_INPUT, MENU_SHOW, MENU_CLOSE, CHANGE_RESTAURANTNAME, CHANGE_PIZZA,  FALSE_PIZZA, CHANGE_BURGER, FALSE_BURGER, CHANGE_BBQ, FALSE_BBQ, CHANGE_SUSHI, FALSE_SUSHI, CHANGE_VEGAN, FALSE_VEGAN, CHANGE_DESERTS, FALSE_DESERTS, INITIALIZE_FORM, REQUEST_DATA, RECEIVE_DATA_SUCCESS, RECEIVE_DATA_FAILED } from "./actions"
+import { MENU_SHOW, MENU_CLOSE, CHANGE_PIZZA, FALSE_PIZZA, CHANGE_BURGER, FALSE_BURGER, CHANGE_BBQ, FALSE_BBQ, CHANGE_SUSHI, FALSE_SUSHI, CHANGE_VEGAN, FALSE_VEGAN, CHANGE_DESERTS, FALSE_DESERTS, REQUEST_DATA, RECEIVE_DATA_SUCCESS, RECEIVE_DATA_FAILED } from "./actions"
 
 const initialState = {
         menu: {
@@ -127,24 +127,10 @@ const initialState = {
                 return state
         }
     }
-
-    const inputReducer = (state = initialState.input, action) => {
-        switch(action.type){
-            case CHANGE_INPUT:
-                return {
-                    ...state,
-                    inputName:action.input
-                }
-            default:
-                    return state
-        }
-    }
-    
     
     const rootReducer = combineReducers({
         categoryReducer,
         restaurantsReducers,
-        inputReducer,
         menuReducer
     })
 

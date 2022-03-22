@@ -1,6 +1,5 @@
-export const CHANGE_RESTAURANTNAME = "CHANGE_RESTAURANTNAME";
 export const CHANGE_PIZZA = "CHANGE_PIZZA";
-export const  FALSE_PIZZA = " FALSE_PIZZA";
+export const FALSE_PIZZA = " FALSE_PIZZA";
 export const CHANGE_BURGER = "CHANGE_BURGER";
 export const FALSE_BURGER = "FALSE_BURGER"
 export const CHANGE_BBQ = "CHANGE_BBQ";
@@ -12,23 +11,11 @@ export const FALSE_VEGAN = "FALSE_VEGAN";
 export const CHANGE_DESERTS = "CHANGE_DESERTS";
 export const FALSE_DESERTS = "FALSE_DESERTS";
 export const INITIALIZE_FORM = "INITIALIZE_FORM";
-export const CHANGE_INPUT = "CHANGE_INPUT";
 export const REQUEST_DATA = "REQUEST_DATA";
 export const RECEIVE_DATA_SUCCESS = "RECEIVE_DATA_SUCCESS";
 export const RECEIVE_DATA_FAILED  = "RECEIVE_DATA_FAILED";
 export const MENU_SHOW = "MENU_SHOW";
 export const MENU_CLOSE = "MENU_CLOSE:"
-
-
-export const changeInput = (input) => ({
-    type:CHANGE_INPUT,
-    input
-})
-
-export const changeRestaurantame = (name) => ({
-    type:CHANGE_RESTAURANTNAME,
-    name
-})
 
 export const changePizza = () =>({
    type:CHANGE_PIZZA,

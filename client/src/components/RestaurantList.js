@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Header from "./Header"
 import { useSelector, useDispatch } from "react-redux";
 import { requestData, receiveDataSuccess, receiveDataFailed } from "../actions"
 
@@ -24,6 +25,7 @@ const RestaurantLis = () => {
 
     return (
         <div>
+            <Header/>
             {isFetching?
                 <h2>Now Loading</h2>
                 :
