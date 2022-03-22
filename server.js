@@ -2,14 +2,16 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import Restaurant from "./models/restaurant";
+import path from "path"
 
 require('dotenv').config()
 
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001
 const dbUrl = process.env.MONGODB_URI
 
+app.use(express.static(path.join(__dirname, "client/build")))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
@@ -39,6 +41,10 @@ mongoose.connect(dbUrl, dbErr =>{
             else response.status(200).send(restaurantArray)
         })
     })
+
+    app.get("*", (req, res, next) => {
+        res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
+      });
 
     app.listen(port, err=>{
         if(err) throw new Error(err)
